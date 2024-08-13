@@ -308,6 +308,20 @@ function sendToWhatsapp(){
 	window.open(url, '_blank').focus();
 }
 </script>
+<script>
+  const typebotInitScript = document.createElement("script");
+typebotInitScript.type = "module";
+typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.4/dist/web.js'
+
+Typebot.initBubble({
+  typebot: "linetivaz",
+  apiHost: "https://bot.cd2.io",
+  previewMessage: { message: "Interessado?" },
+  theme: { button: { backgroundColor: "#0042DA" } },
+});
+`;
+document.body.append(typebotInitScript);
+</script>
 
 </body>
 </html>
